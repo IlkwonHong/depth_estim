@@ -14,8 +14,9 @@ class TrainDatasetPtD(Dataset):
         data_path = self.file_list[idx]
         data_depth = cv2.imread(data_path + 'depth.png')
         data_rgb = cv2.imread(data_path + 'rgb.png')
+        data_gray = cv2.cvtColor(data_rgb, cv2.COLOR_BGR2GRAY)
         data_seg = cv2.imread(data_path + 'rgb_dp_segm.png')
         data_u = cv2.imread(data_path + 'rgb_dp_u.png')
         data_v = cv2.imread(data_path + 'rgb_dp_v.png')
 
-        return data_depth, data_rgb, data_seg, data_u, data_v
+        return data_depth, data_gray, data_seg, data_u, data_v
