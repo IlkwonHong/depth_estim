@@ -17,8 +17,3 @@ if __name__ == '__main__':
         # data_depth, data_rgb, data_seg, data_u, data_v
 
     print(i)
-
-
-
-# token
-# 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
